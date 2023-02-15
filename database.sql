@@ -1,4 +1,4 @@
-INSERT INTO permissions (id,"name",slug,description,created_at,updated_at) VALUES
+INSERT INTO public.permissions (id,"name",slug,description,created_at,updated_at) VALUES
 	 ('3574ad20-a355-11ed-b615-c3c8a7619f52','Create Permission','create-permission',NULL,'2023-02-02 17:56:28.276-06','2023-02-02 17:56:28.276-06'),
 	 ('3acd8ad0-a355-11ed-b615-c3c8a7619f52','Update Permission','update-permission',NULL,'2023-02-02 17:56:37.246-06','2023-02-02 17:56:37.246-06'),
 	 ('472db980-a355-11ed-b615-c3c8a7619f52','List Permissions','list-permissions',NULL,'2023-02-02 17:56:58.008-06','2023-02-02 17:56:58.008-06'),
@@ -9,14 +9,14 @@ INSERT INTO permissions (id,"name",slug,description,created_at,updated_at) VALUE
 	 ('666b7760-a355-11ed-b615-c3c8a7619f52','Get Role','get-role',NULL,'2023-02-02 17:57:50.422-06','2023-02-02 17:57:50.422-06'),
 	 ('6cec5a50-a355-11ed-b615-c3c8a7619f52','Delete Role','delete-role',NULL,'2023-02-02 17:58:01.333-06','2023-02-02 17:58:01.333-06'),
 	 ('89ca7d50-a355-11ed-b615-c3c8a7619f52','Delete Permission','delete-permission',NULL,'2023-02-02 17:58:49.765-06','2023-02-02 17:58:49.765-06');
-INSERT INTO permissions (id,"name",slug,description,created_at,updated_at) VALUES
+INSERT INTO public.permissions (id,"name",slug,description,created_at,updated_at) VALUES
 	 ('dfa95e80-a355-11ed-b615-c3c8a7619f52','Create User','create-user',NULL,'2023-02-02 18:01:13.832-06','2023-02-02 18:01:13.832-06'),
 	 ('e2b517e0-a355-11ed-b615-c3c8a7619f52','Update User','update-user',NULL,'2023-02-02 18:01:18.943-06','2023-02-02 18:01:18.943-06'),
 	 ('e7ae7070-a355-11ed-b615-c3c8a7619f52','List Users','list-users',NULL,'2023-02-02 18:01:27.287-06','2023-02-02 18:01:27.287-06'),
 	 ('eb40bef0-a355-11ed-b615-c3c8a7619f52','Get User','get-user',NULL,'2023-02-02 18:01:33.279-06','2023-02-02 18:01:33.279-06'),
 	 ('f079b890-a355-11ed-b615-c3c8a7619f52','Delete User','delete-user',NULL,'2023-02-02 18:01:42.041-06','2023-02-02 18:01:42.041-06');
 
-INSERT INTO roles (id,"name",slug,description,created_at,updated_at) VALUES
+INSERT INTO public.roles (id,"name",slug,description,created_at,updated_at) VALUES
 	 ('19e7fb40-a0e2-11ed-b16b-f79849cd9fd9','Root','root',NULL,'2023-01-31 16:39:17.802-06','2023-01-31 16:39:17.802-06'),
 	 ('1f34f210-a0e2-11ed-b16b-f79849cd9fd9','Administrador','administrador',NULL,'2023-01-31 16:39:17.802-06','2023-01-31 16:39:17.802-06'),
 	 ('276d9720-a0e2-11ed-b16b-f79849cd9fd9','Cliente','cliente',NULL,'2023-01-31 16:39:17.802-06','2023-01-31 16:39:17.802-06');
@@ -32,7 +32,7 @@ INSERT INTO public.role_permissions (id,role_id,permission_id,created_at,updated
 	 ('dbce8360-a357-11ed-a209-8bbed462e071','19e7fb40-a0e2-11ed-b16b-f79849cd9fd9','666b7760-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:15:26.358-06','2023-02-02 18:15:26.359-06'),
 	 ('dbced180-a357-11ed-a209-8bbed462e071','19e7fb40-a0e2-11ed-b16b-f79849cd9fd9','6cec5a50-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:15:26.36-06','2023-02-02 18:15:26.36-06'),
 	 ('dbcf1fa0-a357-11ed-a209-8bbed462e071','19e7fb40-a0e2-11ed-b16b-f79849cd9fd9','89ca7d50-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:15:26.362-06','2023-02-02 18:15:26.362-06');
-INSERT INTO role_permissions (id,role_id,permission_id,created_at,updated_at) VALUES
+INSERT INTO public.role_permissions (id,role_id,permission_id,created_at,updated_at) VALUES
 	 ('dbcf6dc0-a357-11ed-a209-8bbed462e071','19e7fb40-a0e2-11ed-b16b-f79849cd9fd9','dfa95e80-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:15:26.364-06','2023-02-02 18:15:26.364-06'),
 	 ('dbcfbbe0-a357-11ed-a209-8bbed462e071','19e7fb40-a0e2-11ed-b16b-f79849cd9fd9','e2b517e0-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:15:26.366-06','2023-02-02 18:15:26.366-06'),
 	 ('dbcfe2f0-a357-11ed-a209-8bbed462e071','19e7fb40-a0e2-11ed-b16b-f79849cd9fd9','e7ae7070-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:15:26.367-06','2023-02-02 18:15:26.367-06'),
@@ -43,7 +43,7 @@ INSERT INTO role_permissions (id,role_id,permission_id,created_at,updated_at) VA
 	 ('45bd8050-a358-11ed-a209-8bbed462e071','1f34f210-a0e2-11ed-b16b-f79849cd9fd9','472db980-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:18:24.085-06','2023-02-02 18:18:24.085-06'),
 	 ('45bda760-a358-11ed-a209-8bbed462e071','1f34f210-a0e2-11ed-b16b-f79849cd9fd9','4c5722c0-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:18:24.086-06','2023-02-02 18:18:24.086-06'),
 	 ('45bdce70-a358-11ed-a209-8bbed462e071','1f34f210-a0e2-11ed-b16b-f79849cd9fd9','5ad9bc40-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:18:24.087-06','2023-02-02 18:18:24.087-06');
-INSERT INTO role_permissions (id,role_id,permission_id,created_at,updated_at) VALUES
+INSERT INTO public.role_permissions (id,role_id,permission_id,created_at,updated_at) VALUES
 	 ('45bdf580-a358-11ed-a209-8bbed462e071','1f34f210-a0e2-11ed-b16b-f79849cd9fd9','5e125200-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:18:24.088-06','2023-02-02 18:18:24.088-06'),
 	 ('45be1c90-a358-11ed-a209-8bbed462e071','1f34f210-a0e2-11ed-b16b-f79849cd9fd9','62267ab0-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:18:24.089-06','2023-02-02 18:18:24.089-06'),
 	 ('45be43a0-a358-11ed-a209-8bbed462e071','1f34f210-a0e2-11ed-b16b-f79849cd9fd9','666b7760-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:18:24.09-06','2023-02-02 18:18:24.09-06'),
@@ -55,7 +55,7 @@ INSERT INTO role_permissions (id,role_id,permission_id,created_at,updated_at) VA
 	 ('45bfa330-a358-11ed-a209-8bbed462e071','1f34f210-a0e2-11ed-b16b-f79849cd9fd9','eb40bef0-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:18:24.099-06','2023-02-02 18:18:24.1-06'),
 	 ('45bff150-a358-11ed-a209-8bbed462e071','1f34f210-a0e2-11ed-b16b-f79849cd9fd9','f079b890-a355-11ed-b615-c3c8a7619f52','2023-02-02 18:18:24.101-06','2023-02-02 18:18:24.102-06');
 
-INSERT INTO users (id,email,"password",phone,remember_me_token,confirm_token,recover_token,confirm,"blocked",created_at,updated_at,profile_id) VALUES
+INSERT INTO public.users (id,email,"password",phone,remember_me_token,confirm_token,recover_token,confirm,"blocked",created_at,updated_at,profile_id) VALUES
 	 ('36866b40-a0e4-11ed-be80-87a6daf5deaa','admin@vortexdevops.com','$argon2id$v=19$t=3,m=4096,p=1$1QeKh6hQA7I1k9xPUdw/0Q$jufTooow09QZ4V1/HOn1cT+MloIrGPEvHwtrlyxrgdM','1234567890',NULL,NULL,NULL,true,false,'2023-01-31 16:39:17.939-06','2023-02-01 13:59:38.84-06','94f8a3e4-558c-41f0-ad8d-2bd8ebde43c2'),
 	 ('30556690-a314-11ed-8fbc-7fa7a206f049','alberto@vortexdevops.com','$argon2id$v=19$t=3,m=4096,p=1$5IwbI1U2+q6rzMtqyXnCKg$Hx7cq5cp60LxV/PwosiF3QIJOAeevHpidqRWMV30bPU','1231231212',NULL,NULL,NULL,true,false,'2023-02-02 10:11:02.54-06','2023-02-02 10:11:02.552-06','306d0d40-a314-11ed-8fbc-7fa7a206f049'),
 	 ('d6934380-9aca-11ed-9a73-ad2ecd89790f','root@vortexdevops.com','$argon2id$v=19$t=3,m=4096,p=1$Aw4Hvh5kSlFd9wBq8j/A7A$jK6HyxZQrMNYeCiRHfLiUj08jc8aFMmFs+Cv/vHMHfU','2222062058',NULL,NULL,NULL,true,false,'2023-01-31 16:39:17.939-06','2023-01-31 16:39:18.153-06','f7eaa8c3-e03d-4904-a987-2e4717bea4e0');
