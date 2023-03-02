@@ -8,6 +8,8 @@ import CustomMessages from 'App/Utils/CustomMessages';
 import Media from 'App/Models/Media'
 import User from 'App/Models/User';
 
+import { extname } from 'path'
+
 export default class MediaController {
     public async store({ auth, request, response }) {
         const customSchema = schema.create({
@@ -178,6 +180,32 @@ export default class MediaController {
                 code: 'MEDIA_DELETED',
                 message: 'Archivo eliminado'
             })
+        } catch (error) {
+            if (error.messages?.errors?.length > 0) {
+                return response.badRequest(error.messages.errors[0])
+            }
+            return response.badRequest(error)
+        }
+    }
+    public async download({ request, response }) {
+        try {
+            const { id } = request.params()
+
+            const media = await Media.find(id)
+            if (!media) {
+                return response.badRequest({
+                    code: 'MEDIA_NOT_FOUND',
+                    message: 'Archivo no encontrado'
+                })
+            }
+
+            const { size } = await Drive.getStats(media.fullPath)
+            const stream = await Drive.getStream(media.fullPath)
+
+            response.type(extname(media.fullPath))
+            response.header('content-length', size)
+
+            return response.stream(stream)
         } catch (error) {
             if (error.messages?.errors?.length > 0) {
                 return response.badRequest(error.messages.errors[0])

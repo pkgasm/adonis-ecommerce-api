@@ -69,6 +69,9 @@ Route.group(() => {
     Route.delete('/:id', 'MediaController.delete')
     Route.put('/:id', 'MediaController.update')
   }).prefix('media/upload').middleware(['auth', 'is:root,administrador,cliente'])
+  Route.group(() => {
+    Route.get('/:id', 'MediaController.download')
+  }).prefix('media/download').middleware(['auth', 'is:root,administrador,cliente'])
   // Categories
   Route.group(() => {
     Route.post('/', 'CategoriesController.store')
