@@ -18,6 +18,7 @@ import User from 'App/Models/User';
 export default class Cart extends BaseModel {
     @column({
         isPrimary: true,
+        consume: (_value, _attribute, model) => _value || model.$getAttribute('id')
     })
     public id: string
 

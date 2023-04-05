@@ -23,6 +23,7 @@ export default class Permission extends BaseModel {
 
     @column({
         isPrimary: true,
+        consume: (_value, _attribute, model) => _value || model.$getAttribute('id')
     })
     public id: string
 

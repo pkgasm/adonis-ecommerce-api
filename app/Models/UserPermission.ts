@@ -21,6 +21,7 @@ export default class UserPermission extends BaseModel {
     public static selfAssignPrimaryKey = false
     @column({
         isPrimary: true,
+        consume: (_value, _attribute, model) => _value || model.$getAttribute('id')
     })
     public id: string
 

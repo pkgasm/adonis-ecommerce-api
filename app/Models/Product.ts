@@ -19,7 +19,10 @@ import Category from 'App/Models/Category';
 import Commerce from 'App/Models/Commerce';
 
 export default class Product extends BaseModel {
-    @column({ isPrimary: true })
+    @column({
+        isPrimary: true,
+        consume: (_value, _attribute, model) => _value || model.$getAttribute('id')
+    })
     public id: string
 
     @column()

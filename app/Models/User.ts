@@ -18,7 +18,10 @@ import Profile from 'App/Models/Profile';
 import { v1 as uuidv1 } from "uuid";
 
 export default class User extends BaseModel {
-  @column({ isPrimary: true })
+  @column({ 
+    isPrimary: true,
+    consume: (_value, _attribute, model) => _value || model.$getAttribute('id')
+   })
   public id: string
 
   @column()

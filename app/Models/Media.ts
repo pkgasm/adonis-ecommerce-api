@@ -19,6 +19,7 @@ import { v1 as uuidv1 } from "uuid";
 export default class Media extends BaseModel {
     @column({
         isPrimary: true,
+        consume: (_value, _attribute, model) => _value || model.$getAttribute('id')
     })
     public id: string
 
